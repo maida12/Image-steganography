@@ -426,8 +426,8 @@ class IMG_Stegno:
             newImg.save(tkinter.filedialog.asksaveasfilename (initialfile=temp, filetypes = ([('png', '*.png')]), defaultextension=".png"))
             self.d_image_size = my_file.tell()
             self.d_image_w,self.d_image_h = newImg.size
-            messagebox.showinfo("Success","Encoding Successful\nFile is saved as Image_with_hiddentext.png in the same directory")
- 
+            messagebox.showinfo("Success", f"Encoding Successful\nFile is saved as Image_with_hiddentext.png in the same directory\nImage Size: {self.d_image_w} x {self.d_image_h}")
+
     def enc_fun1(self,text_a,myImg,password):
         data = text_a.get("1.0", "end-1c")
         if (len(data) == 0):
@@ -443,7 +443,7 @@ class IMG_Stegno:
             newImg.save(tkinter.filedialog.asksaveasfilename (initialfile=temp, filetypes = ([('png', '*.png')]), defaultextension=".png"))
             self.d_image_size = my_file.tell()
             self.d_image_w,self.d_image_h = newImg.size
-            messagebox.showinfo("Success","Encoding Successful\nFile is saved as Image_with_hiddentext.png in the same directory")
+            messagebox.showinfo("Success", f"Encoding Successful\nFile is saved as Image_with_hiddentext.png in the same directory\nImage Size: {self.d_image_w} x {self.d_image_h}")
  
     def frame_3(self,frame):
         frame.destroy()
