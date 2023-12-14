@@ -22,7 +22,7 @@ class IMG_Stegno:
         frame = Frame(root)
         frame.grid()
         
-        title = Label(frame,text='MH Image Steganography')
+        title = Label(frame,text='DisguiseGram')
         title.config(font=('Times new roman',25, 'bold'),bg = '#64CCC5',)
         title.grid(pady=10)
         title.grid(row=1)
