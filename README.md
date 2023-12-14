@@ -11,4 +11,4 @@ The Python Image Steganography project is a GUI based application that enables u
 - Normal dycrption
 ## Screenshots
 
-![App Screenshot]("C:\Users\fatim\Pictures\Screenshots\Screenshot 2023-12-14 190148.png")
+![App Screenshot](https://github.com/maida12/Image-steganography/assets/81500487/b7254e18-4843-4694-8040-613fc406c66c)
