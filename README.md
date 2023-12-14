@@ -26,7 +26,7 @@ The Python Image Steganography project is a GUI based application that enables u
 1. Clone the repository:
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/maida12/Image-steganography.git
     cd Image-Steganography
     ```
 
