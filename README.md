@@ -68,9 +68,22 @@ The Python Image Steganography project is a GUI based application that enables u
 ![App Screenshot](https://github.com/maida12/Image-steganography/assets/81500487/6901edef-a575-43a1-8fec-a5673aeaea4c)
 
 
+
+## Steganalysis with LSB Detection
+
+This project not only enables you to hide data within images but also provides a Steganalysis feature to detect hidden information. The `show_lsb` function utilizes the LSB method to reveal the n least significant bits of an image.
+
+### Steganalysis Example
+
+You can use the `show_lsb` function by providing the image file path and the number of least significant bits to reveal. 
+
+
+
 ## Acknowledgments
 
 - This project was inspired by [DataFlair's Python Image Steganography project](https://data-flair.training/blogs/python-image-steganography-project/).
+
+
 
 ## License
 
