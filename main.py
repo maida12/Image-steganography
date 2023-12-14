@@ -10,7 +10,7 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 import os
 import base64
-securePass="a"
+securePass="secure"
 
 class IMG_Stegno:
     # main frame or start page
@@ -18,20 +18,20 @@ class IMG_Stegno:
         root.title('ImageSteganography by Maida and Hira')
         root.geometry('500x600')
         root.resizable(width =False, height=False)
-        root.config(bg = '#e3f4f1')
+        root.config(bg = '#64CCC5')
         frame = Frame(root)
         frame.grid()
         
         title = Label(frame,text='MH Image Steganography')
-        title.config(font=('Times new roman',25, 'bold'),bg = '#e3f4f1')
+        title.config(font=('Times new roman',25, 'bold'),bg = '#64CCC5',)
         title.grid(pady=10)
         title.grid(row=1)
 
-        encode = Button(frame,text="Encode",command= lambda :self.encode_frame3(frame), padx=14,bg = '#e3f4f1' )
-        encode.config(font=('Helvetica',14), bg='#e8c1c7')
+        encode = Button(frame,text="Encode",command= lambda :self.encode_frame3(frame), padx=14,bg = '#CF38EE' )
+        encode.config(font=('Helvetica',14), bg='#176B87',fg='#EEEEEE')
         encode.grid(row=2)
-        decode = Button(frame, text="Decode",command=lambda :self.decode_frame3(frame), padx=14,bg = '#e3f4f1')
-        decode.config(font=('Helvetica',14), bg='#e8c1c7')
+        decode = Button(frame, text="Decode",command=lambda :self.decode_frame3(frame), padx=14,bg = '#CF38EE')
+        decode.config(font=('Helvetica',14), bg='#176B87',fg='#EEEEEE')
         decode.grid(pady = 12)
         decode.grid(row=3)
 
@@ -62,14 +62,14 @@ class IMG_Stegno:
         F.destroy()
         F2 = Frame(root)
         label1= Label(F2,text='Select the Image in which \n you want to hide text :')
-        label1.config(font=('Times new roman',25, 'bold'),bg = '#e3f4f1')
+        label1.config(font=('Times new roman',25, 'bold'),bg = '#64CCC5')
         label1.grid()
 
         button_bws = Button(F2,text='Select',command=lambda : self.encode_frame2(F2))
-        button_bws.config(font=('Helvetica',18), bg='#e8c1c7')
+        button_bws.config(font=('Helvetica',18), bg='#176B87',fg='#EEEEEE')
         button_bws.grid()
         button_back = Button(F2, text='Cancel', command=lambda : IMG_Stegno.back(self,F2))
-        button_back.config(font=('Helvetica',18),bg='#e8c1c7')
+        button_back.config(font=('Helvetica',18),bg='#176B87',fg='#EEEEEE')
         button_back.grid(pady=15)
         button_back.grid()
         F2.grid()
@@ -82,14 +82,14 @@ class IMG_Stegno:
         label1.grid()
         label1.config(bg = '#e3f4f1')
         button_bws = Button(d_f2, text='Select for Normal', command=lambda :self.decode_frame2(d_f2))
-        button_bws.config(font=('Helvetica',18), bg='#e8c1c7')
+        button_bws.config(font=('Helvetica',18), bg='#176B87',fg='#EEEEEE')
         button_bws.grid()
 
         button_bws1 = Button(d_f2, text='Select for AES', command=lambda :self.decode_frame4(d_f2))
-        button_bws1.config(font=('Helvetica',18), bg='#e8c1c7')
+        button_bws1.config(font=('Helvetica',18), bg='#176B87',fg='#EEEEEE')
         button_bws1.grid(pady=15)
         button_back = Button(d_f2, text='Cancel', command=lambda : IMG_Stegno.back(self,d_f2))
-        button_back.config(font=('Helvetica',18), bg='#e8c1c7')
+        button_back.config(font=('Helvetica',18), bg='#176B87',fg='#EEEEEE')
         button_back.grid(pady=15)
         button_back.grid()
         d_f2.grid()
@@ -122,10 +122,10 @@ class IMG_Stegno:
             
             data = text_a.get("1.0", "end-1c")
             encode_button = Button(e_pg, text=' Normal Encode', command=lambda : [self.enc_fun(text_a,my_img,self.password),IMG_Stegno.back(self,e_pg)])
-            encode_button.config(font=('Helvetica',14), bg='#e8c1c7')
+            encode_button.config(font=('Helvetica',14), bg='#176B87',fg='#EEEEEE')
             encode_button.grid()
             button_back = Button(e_pg, text='AES Encode', command=lambda : [self.enc_fun1(text_a,my_img,self.password),IMG_Stegno.back(self,e_pg)])
-            button_back.config(font=('Helvetica',14), bg='#e8c1c7')
+            button_back.config(font=('Helvetica',14), bg='#176B87',fg='#EEEEEE')
             button_back.grid(pady=15) 
             
             
@@ -168,7 +168,7 @@ class IMG_Stegno:
             self.encode_frame1(e_pg)
 
         button_back =Button(e_pg, text='Enter', command=on_enter_button_click)
-        button_back.config(font=('Helvetica',14), bg='#e8c1c7')
+        button_back.config(font=('Helvetica',14), bg='#176B87',fg='#EEEEEE')
         button_back.grid(pady=15)
         e_pg.grid(row=1)
         e_F3.destroy()
@@ -181,7 +181,7 @@ class IMG_Stegno:
         label11.grid()
 
         button_bws = Button(F6,text='Normal Encryption',command=self.on_enter_button_click(0,F6))
-        button_bws.config(font=('Helvetica',18), bg='#e8c1c7')
+        button_bws.config(font=('Helvetica',18), bg='#176B87',fg='#EEEEEE')
         button_bws.grid()
 
         option_var = IntVar()
@@ -192,11 +192,11 @@ class IMG_Stegno:
             
         
         button_bws1 = Button(F6,text='AES Encryption',command=self.on_button_click1(0,F6))
-        button_bws1.config(font=('Helvetica',18), bg='#e8c1c7')
+        button_bws1.config(font=('Helvetica',18), bg='#176B87',fg='#EEEEEE')
         button_bws1.grid()
 
         button_back = Button(F6, text='Cancel', command=lambda : IMG_Stegno.back(self,F6))
-        button_back.config(font=('Helvetica',18),bg='#e8c1c7')
+        button_back.config(font=('Helvetica',18),bg='#176B87',fg='#EEEEEE')
         button_back.grid(pady=15)
         button_back.grid()
         F6.grid()
@@ -226,7 +226,7 @@ class IMG_Stegno:
             text_a.configure(state='disabled')
             text_a.grid()
             button_back = Button(d_F3, text='Cancel', command= lambda :self.Page_3(d_F3))
-            button_back.config(font=('Helvetica',14),bg='#e8c1c7')
+            button_back.config(font=('Helvetica',14),bg='#176B87',fg='#EEEEEE')
             button_back.grid(pady=15)
             button_back.grid()
             d_F3.grid(row=1)
@@ -256,7 +256,7 @@ class IMG_Stegno:
             text_a.configure(state='disabled')
             text_a.grid()
             button_back = Button(d_F3, text='Cancel', command= lambda :self.Page_3(d_F3))
-            button_back.config(font=('Helvetica',14),bg='#e8c1c7')
+            button_back.config(font=('Helvetica',14),bg='#176B87',fg='#EEEEEE')
             button_back.grid(pady=15)
             button_back.grid()
             d_F3.grid(row=1)
@@ -287,7 +287,7 @@ class IMG_Stegno:
             self.decode_frame1(e_pg)
 
         button_back =Button(e_pg, text='Enter', command=on_enter_button_click)
-        button_back.config(font=('Helvetica',14), bg='#e8c1c7')
+        button_back.config(font=('Helvetica',14), bg='#176B87',fg='#EEEEEE')
         button_back.grid(pady=15)
         e_pg.grid(row=1)
         e_F3.destroy()
