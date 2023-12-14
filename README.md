@@ -79,6 +79,9 @@ You can use the `show_lsb` function by providing the image file path and the num
 
 ![three-lotus-steg-with-2LSBs](https://github.com/maida12/Image-steganography/assets/81500487/eba912b3-8e03-49bf-85f4-7fb6d7ed88be)
 
+![flower-purple-lical-blosso](https://github.com/maida12/Image-steganography/assets/81500487/71aa6dd7-b9a6-4b9e-869e-007817d900cb)
+![flower-purple-lical-blosso_1LSBs](https://github.com/maida12/Image-steganography/assets/81500487/0f5d57b8-c121-4dcd-b960-57833663bc4c)
+
 
 ## Acknowledgments
 
