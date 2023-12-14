@@ -77,6 +77,7 @@ This project not only enables you to hide data within images but also provides a
 
 You can use the `show_lsb` function by providing the image file path and the number of least significant bits to reveal. 
 
+![three-lotus-steg-with-2LSBs](https://github.com/maida12/Image-steganography/assets/81500487/eba912b3-8e03-49bf-85f4-7fb6d7ed88be)
 
 
 ## Acknowledgments
